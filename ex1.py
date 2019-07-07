@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.io import loadmat
 
 #Load the data.
-X = loadmat("E:\我的文档\文档\Practices\machine learing - ex\ex1data1.mat")
+X = loadmat("X:\loacation of ex1data1\ex1data1.mat") #You need to change the position of loadmat function.
 #You could change the different data to the linear regression training model
 X = X['data']
 x = np.array(X)
