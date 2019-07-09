@@ -102,7 +102,8 @@ ax.set_ylabel('theta_1')
 ax.set_zlabel('J')
 plt.show()
 
-
+# Contour plot
+# Plot J_val-2, 3,s as 15 contours spaced logarithmically between 0.01 and 100
 plt.contour(theta0_vals, theta1_vals, J_vals, np.logspace(-2, 3, 20))
 plt.plot(theta[0], theta[1], 'rx', linewidth=2, markersize=10)
 plt.xlim(-10, 10)
