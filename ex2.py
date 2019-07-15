@@ -1,3 +1,4 @@
+
 # Logistic Regression
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,6 +20,9 @@ from plotData import plotData
 print (['Plotting data with + indicating (y = 1) examples \
         and o indicating (y = 0) examples.\n'])
 plotData(X, y)
+plt.xlabel('Exam 1 score')
+plt.ylabel('Exam 2 score')
+plt.legend (['Admitted', 'Not admitted']) # Automatic detectson of elements to be shown in the legend
 plt.show ()
 print ('\nProgram paused. Press enter to continue.\n')
 input ()
@@ -73,6 +77,9 @@ print ('[ [-25.161]\n  [0.206]\n  [0.201]\n')
 # Plot Boundary
 from plotDecisionBoundary import plotDecisionBoundary
 plotDecisionBoundary(theta, X, y)
+plt.xlabel('Exam 1 score')
+plt.ylabel('Exam 2 score')
+plt.legend (['Bounday','Admitted', 'Not admitted']) # Automatic detectson of elements to be shown in the legend
 plt.show ()
 
 ## ============== Part 4: Predict and Accuracies ==============
@@ -94,6 +101,7 @@ print ('Expected value: 0.775 +/- 0.002\n\n')
 from predict import predict
 p = predict(theta, X)
 p = p.reshape((m, 1))
-print ('Train Accuracy: %f\n'% (m - (np.power(p-y, 2)).sum()))
+ans = np.mean(np.double(p == y)) * 100
+print ('Train Accuracy: %f\n'% ans)
 print ('Expected accuracy (approx): 89.0\n')
-print ('\n');
+print ('\n')
